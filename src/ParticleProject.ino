@@ -1,7 +1,6 @@
 #include "Particle.h"
 #include "Utils.h"
 #include "SdFat.h"
-
 SYSTEM_MODE(SEMI_AUTOMATIC); // Toggle to disable cloud on startup
 SYSTEM_THREAD(ENABLED);
 #define SD_CS D8
@@ -61,8 +60,8 @@ void loop() {
         }
     } 
     // Playing with this delay time doesnt seem to have an effect
-    delay(10);
+    // delay(10);
     myCount2++;
     if(myCount2 % 100 == 0)
-        Log.info("Loop");
+        Log.info("Loop %d", myC);
 }
